@@ -3,45 +3,94 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Curriculum Vitae - Cristiano Ronaldo</title>
 		<meta
 			name="description"
-			content="Het officiële CV van Cristiano Ronaldo. Ontdek zijn ervaring, vaardigheden en carrièrehoogtepunten."
+			content="CV van Cristiano Ronaldo - Wereldberoemde voetballer"
 		/>
+		<title>CV van Cristiano Ronaldo</title>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<header>
-			<nav>
-				<div class="logo">CR7</div>
-				<div class="hamburger" id="hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
+			<div class="topnav">
+				<a href="#home" class="active">CR7 CV</a>
+				<div id="myLinks">
+					<a href="index.html">Home</a>
+					<a href="ervaring.html">Ervaring</a>
+					<a href="vaardigheden.html">Vaardigheden</a>
 				</div>
-				<ul class="nav-links" id="nav-links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="ervaring.html">Ervaring</a></li>
-					<li><a href="vaardigheden.html">Vaardigheden</a></li>
-				</ul>
-			</nav>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
 		</header>
 
 		<main>
 			<section class="intro">
-				<h1>Welkom op het CV van Cristiano Ronaldo</h1>
+				<div class="slider-wrapper">
+					<div class="slider">
+						<div id="slide-1" class="slide">
+							<img
+								src="imgas/B_R Football (@brfootball) on X.jpeg"
+								alt="Slide 1"
+							/>
+						</div>
+						<div id="slide-2" class="slide">
+							<img src="imgas/Cristiano Ronaldo (1).png" alt="Slide 2" />
+						</div>
+						<div id="slide-3" class="slide">
+							<img
+								src="imgas/Cristiano Ronaldo CR7 HD Wallpaper.png"
+								alt="Slide 3"
+							/>
+						</div>
+					</div>
+					<div class="slider-nav">
+						<a href="#slide-1">1</a>
+						<a href="#slide-2">2</a>
+						<a href="#slide-3">3</a>
+					</div>
+				</div>
+
+				<h1>Cristiano Ronaldo</h1>
 				<p>
-					Ik ben Cristiano Ronaldo, een professionele voetballer, wereldwijde
-					merkambassadeur en vijfvoudig Ballon d'Or-winnaar. Mijn doel is om te
-					blijven inspireren op en buiten het veld.
+					Wereldberoemde Portugese voetballer, beschouwd als een van de grootste
+					sporters aller tijden. Met talloze prijzen en records is Cristiano
+					Ronaldo een icoon in de sportwereld.
 				</p>
-				<a href="ervaring.html" class="btn">Bekijk Ervaring</a>
-				<a href="vaardigheden.html" class="btn">Bekijk Vaardigheden</a>
+				<a href="ervaring.html" class="btn">Bekijk mijn ervaring</a>
+				<a href="vaardigheden.html" class="btn">Bekijk mijn vaardigheden</a>
 			</section>
 		</main>
 
 		<footer>
+			<p>Volg Cristiano Ronaldo:</p>
+			<ul class="social-media">
+				<li>
+					<a href="https://www.instagram.com/cristiano/" target="_blank"
+						>Instagram</a
+					>
+				</li>
+				<li>
+					<a href="https://twitter.com/Cristiano" target="_blank">Twitter</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/cristiano" target="_blank"
+						>Facebook</a
+					>
+				</li>
+			</ul>
 			<p>&copy; 2024 Cristiano Ronaldo. Alle rechten voorbehouden.</p>
 		</footer>
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myLinks");
+				if (x.style.display === "block") {
+					x.style.display = "none";
+				} else {
+					x.style.display = "block";
+				}
+			}
+		</script>
 	</body>
 </html>

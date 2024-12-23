@@ -12,59 +12,81 @@
 	</head>
 	<body>
 		<header>
-			<nav>
-				<div class="logo">CR7</div>
-				<div class="hamburger" id="hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
+			<div class="topnav">
+				<a href="#home" class="active">CR7 CV</a>
+				<div id="myLinks">
+					<a href="index.html">Home</a>
+					<a href="ervaring.html">Ervaring</a>
+					<a href="vaardigheden.html">Vaardigheden</a>
 				</div>
-				<ul class="nav-links" id="nav-links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="ervaring.html">Ervaring</a></li>
-					<li><a href="vaardigheden.html">Vaardigheden</a></li>
-				</ul>
-			</nav>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
 		</header>
-
 		<main>
 			<section class="ervaring">
 				<h1>Professionele Ervaring</h1>
-				<article>
-					<h2>Voetballer - Al-Nassr</h2>
-					<p><strong>2023 - Heden</strong></p>
-					<ul>
-						<li>Bijgedragen aan teamoverwinningen in regionale competities.</li>
-						<li>
-							Gecoacht en begeleid jongere spelers om hun prestaties te
-							verbeteren.
-						</li>
-					</ul>
-				</article>
-				<article>
-					<h2>Voetballer - Manchester United</h2>
-					<p><strong>2021 - 2023</strong></p>
-					<ul>
-						<li>Topscorer van het seizoen 2021/2022.</li>
-						<li>
-							Bijgedragen aan belangrijke wedstrijden in de Premier League.
-						</li>
-					</ul>
-				</article>
-				<article>
-					<h2>Voetballer - Real Madrid</h2>
-					<p><strong>2009 - 2018</strong></p>
-					<ul>
-						<li>Winnaar van 4 Champions League-titels.</li>
-						<li>Beste doelpuntenmaker in de geschiedenis van de club.</li>
-						<li>Vijfvoudig Ballon d'Or-winnaar.</li>
-					</ul>
-				</article>
+				<div class="ervaring-container">
+					<article>
+						<h2>Voetballer - Al-Nassr</h2>
+						<img
+							src="imgas/Cristiano Ronaldo Wallpaper 🖤🫶.png"
+							alt="Cristiano Ronaldo bij Al-Nassr"
+						/>
+						<p><strong>2023 - Heden</strong></p>
+						<ul>
+							<li>
+								Bijgedragen aan teamoverwinningen in regionale competities.
+							</li>
+							<li>
+								Gecoacht en begeleid jongere spelers om hun prestaties te
+								verbeteren.
+							</li>
+						</ul>
+					</article>
+					<article>
+						<h2>Voetballer - Manchester United</h2>
+						<img
+							src="imgas/9086e6ac-4cc6-4d2a-8f30-d3433475a457.png"
+							alt="Cristiano Ronaldo bij Manchester United"
+						/>
+						<p><strong>2021 - 2023</strong></p>
+						<ul>
+							<li>Topscorer van het seizoen 2021/2022.</li>
+							<li>
+								Bijgedragen aan belangrijke wedstrijden in de Premier League.
+							</li>
+						</ul>
+					</article>
+					<article>
+						<h2>Voetballer - Real Madrid</h2>
+						<img
+							src="imgas/RONALDO 4K.jpeg"
+							alt="Cristiano Ronaldo bij Real Madrid"
+						/>
+						<p><strong>2009 - 2018</strong></p>
+						<ul>
+							<li>Winnaar van 4 Champions League-titels.</li>
+							<li>Beste doelpuntenmaker in de geschiedenis van de club.</li>
+							<li>Vijfvoudig Ballon d'Or-winnaar.</li>
+						</ul>
+					</article>
+				</div>
 			</section>
 		</main>
-
 		<footer>
 			<p>&copy; 2024 Cristiano Ronaldo. Alle rechten voorbehouden.</p>
 		</footer>
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myLinks");
+				if (x.style.display === "block") {
+					x.style.display = "none";
+				} else {
+					x.style.display = "block";
+				}
+			}
+		</script>
 	</body>
 </html>

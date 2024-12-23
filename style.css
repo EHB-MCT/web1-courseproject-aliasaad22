@@ -1,4 +1,3 @@
-/* Algemeen */
 * {
 	margin: 0;
 	padding: 0;
@@ -6,12 +5,13 @@
 	font-family: Arial, sans-serif;
 }
 
-body {
-	background-color: #f4f4f4;
-	color: #333;
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: auto;
 }
 
-/* Header */
 header {
 	background-color: #1e1e1e;
 	color: #fff;
@@ -21,94 +21,15 @@ header {
 	z-index: 1000;
 }
 
-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 20px;
-}
-
-nav .logo {
-	font-size: 24px;
-	font-weight: bold;
-}
-
-nav .hamburger {
-	display: none;
-	cursor: pointer;
-}
-
-nav .hamburger span {
-	display: block;
-	width: 25px;
-	height: 3px;
-	margin: 5px auto;
-	background-color: #fff;
-}
-
-nav .nav-links {
-	display: flex;
-	gap: 20px;
-}
-
-nav .nav-links li {
-	list-style: none;
-}
-
-nav .nav-links a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 18px;
-	transition: color 0.3s;
-}
-
-nav .nav-links a:hover {
-	color: #ffcc00;
-}
-
 /* Mobile Menu */
-@media (max-width: 768px) {
-	nav .nav-links {
-		position: absolute;
-		top: 60px;
-		right: 0;
-		background-color: #1e1e1e;
-		width: 100%;
-		height: 100vh;
-		flex-direction: column;
-		justify-content: center;
-		display: none;
-	}
-
-	nav .nav-links.active {
-		display: flex;
-	}
-
-	.hamburger {
-		display: block;
-	}
-
-	.hamburger.active span:nth-child(1) {
-		transform: rotate(45deg);
-		position: relative;
-		top: 6px;
-	}
-
-	.hamburger.active span:nth-child(2) {
-		opacity: 0;
-	}
-
-	.hamburger.active span:nth-child(3) {
-		transform: rotate(-45deg);
-		position: relative;
-		top: -6px;
-	}
-}
 
 /* Main Content */
 main {
 	padding: 50px 20px;
 	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .intro {
@@ -143,7 +64,6 @@ main {
 	background-color: #ff9900;
 }
 
-/* Ervaring en Vaardigheden */
 section h1 {
 	font-size: 30px;
 	margin-bottom: 20px;
@@ -174,16 +94,13 @@ article ul {
 	font-size: 18px;
 }
 
-/* Footer */
 footer {
 	background-color: #1e1e1e;
 	color: #fff;
 	text-align: center;
 	padding: 15px 0;
-	margin-top: 40px;
 }
 
-/* Animaties */
 nav .nav-links a {
 	transition: transform 0.3s ease;
 }
@@ -192,17 +109,132 @@ nav .nav-links a:hover {
 	transform: scale(1.1);
 }
 
-/* Responsieve ontwerp */
-@media (max-width: 768px) {
-	.intro h1 {
-		font-size: 28px;
-	}
+.slider-wrapper {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
 
-	.intro p {
-		font-size: 18px;
-	}
+.slider {
+	display: flex;
+	scroll-snap-type: x mandatory;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	width: 100%;
+}
 
-	.btn {
-		font-size: 16px;
+.slide {
+	scroll-snap-align: center;
+	flex: none;
+	width: 100%;
+	height: auto;
+}
+
+.slide img {
+	width: auto;
+	height: auto;
+	display: block;
+}
+
+.slider-nav {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.slider-nav a {
+	text-decoration: none;
+	padding: 5px 10px;
+	margin: 0 5px;
+	background-color: #ffcc00;
+	color: #1e1e1e;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+.slider-nav a:hover {
+	background-color: #ff9900;
+}
+
+.ervaring-container {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 25px;
+}
+
+.ervaring-container article {
+	flex: 1;
+	max-width: 400px;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.ervaring-container img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin-bottom: 10px;
+}
+
+.mobile-container {
+	max-width: 480px;
+	margin: auto;
+	background-color: #555;
+	height: 500px;
+	color: white;
+	border-radius: 10px;
+}
+
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+	position: relative;
+}
+
+.topnav #myLinks {
+	display: none;
+}
+
+.topnav a {
+	color: white;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	display: block;
+}
+
+.topnav a.icon {
+	background: black;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.active {
+	background-color: #04aa6d;
+	color: white;
+}
+
+@media (min-width: 480px) {
+	.topnav a {
+		display: inline-block;
+	}
+	.topnav #myLinks {
+		display: inline-block !important;
+		float: right;
+	}
+	.topnav a.icon {
+		display: none;
 	}
 }
